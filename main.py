@@ -26,8 +26,8 @@ except:
 
 
 translate = translator.translate(convertText, dest=translateLanguage)
-print(translate.text)
-speak = gtts.gTTS(translate.text, lang=translateLanguage)
+print(translate.text) # type: ignore
+speak = gtts.gTTS(translate.text, lang=translateLanguage) # type: ignore
 speak.save('speak.mp3')
 playsound.playsound('speak.mp3')
 
